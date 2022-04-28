@@ -6,7 +6,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Coming Soon</p>
+        <p>Best Night of the Week</p>
+        <p>COMING SOON</p>
         <a
           className="App-link"
           href="https://www.instagram.com/denverurbanskate/?hl=en"
