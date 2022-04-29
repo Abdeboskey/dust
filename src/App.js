@@ -1,4 +1,4 @@
-import logo from './assets/nu-logo.png';
+import logo from './assets/nu-logo-teal.svg';
 import './App.css';
 
 function App() {
