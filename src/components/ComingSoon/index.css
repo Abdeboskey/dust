@@ -1,0 +1,42 @@
+.ComingSoon-logo {
+  width: 80vmin;
+  max-width: 500px;
+  margin-top: 5vh;
+  pointer-events: none;
+  filter: drop-shadow(7px 7px 14px #1b1e23);
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .ComingSoon-logo {
+    animation: ComingSoon-logo-spin infinite 20s linear;
+  }
+} */
+
+.ComingSoon-header {
+  background-color: #282c34;
+  min-height: 96vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-radius: 30px;
+  box-shadow: inset 14px 14px 28px #1b1e23,
+            inset -14px -14px 28px #353a45,
+             14px 14px 28px #1f7778,
+             -14px -14px 28px #3de7ea;
+}
+
+.ComingSoon-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
