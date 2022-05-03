@@ -6,13 +6,13 @@ const ComingSoon = () => {
     <header className="ComingSoon-header">
       <img
         src={logo}
-        className="ComingSoon-logo"
+        className="ComingSoon-logo m-4"
         alt="denver-urban-skate-troop-logo"
       />
-      <p>~ Best Night of the Week ~</p>
-      <h2>✨ COMING SOON ✨</h2>
+      <p className="text-dusteal font-bold">~ Best Night of the Week ~</p>
+      <h2 className="text-3xl font-bold m-6">✨ COMING SOON ✨</h2>
       <p>
-        Meanwhile...<br/><br/>
+        Meanwhile...<br/>
         Visit our&nbsp;
         <a
           className="ComingSoon-link"
@@ -31,10 +31,8 @@ const ComingSoon = () => {
         >
           facebook
         </a>.
-        <br/>
-        <br/>
-        Happy Skating!
       </p>
+      <p className="mt-6">Happy Sk8ing!</p>
     </header>
   );
 }
