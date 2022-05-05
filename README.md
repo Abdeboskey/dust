@@ -1,3 +1,48 @@
+# Denver Urban Skate Troop
+
+This is a website about a Rollerblading & Rollerskating community in Denver, CO.
+
+## MVP 
+
+- A schedule of upcoming events
+- An `About` page
+- A `Resources` page
+
+## Stack
+- React
+- Tailwind CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
