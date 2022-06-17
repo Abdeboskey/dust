@@ -22,10 +22,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
   border-radius: 30px;
-  box-shadow: inset 14px 14px 28px #1b1e23,
+  /* box-shadow: inset 14px 14px 28px #1b1e23,
             inset -14px -14px 28px #353a45,
              14px 14px 28px #1f7778,
-             -14px -14px 28px #3de7ea;
+             -14px -14px 28px #3de7ea; */
 }
 
 .ComingSoon-link {
