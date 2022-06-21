@@ -3,7 +3,7 @@ import {
   Route,
 } from 'react-router-dom';
 
-import ComingSoon from './components/ComingSoon';
+// import ComingSoon from './components/ComingSoon';
 import Header from './components/Header';
 import WelcomeFAQ from './components/WelcomeFAQ';
 
