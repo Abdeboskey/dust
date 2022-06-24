@@ -5,16 +5,25 @@ import {
 
 // import ComingSoon from './components/ComingSoon';
 import Header from './components/Header';
+import Home from './components/Home';
 import WelcomeFAQ from './components/WelcomeFAQ';
 
 function App() {
   return (
-    <div>
+    <div className="font-main">
       <Header />
       <Routes>
-        <Route path="/" element={"Home"} />
+        <Route
+          exact path="/"
+          element={<Home />}
+        />
         <Route path="/welcome" element={<WelcomeFAQ />} />
-        <Route path="/resources" element={"Resources"} />
+        <Route
+          path="/resources"
+          element={
+            <h1 className="text-4xl text-center font-bold m-8">Resources</h1>
+          }
+        />
         {/* <ComingSoon /> */}
       </Routes>
     </div>
