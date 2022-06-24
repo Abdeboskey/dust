@@ -18,7 +18,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className="block">
+        <nav className="hidden md:block">
           <Link to="/">
             <span className={navlinkStyle}>CALENDAR</span>
           </Link>
@@ -36,7 +36,7 @@ const Header = () => {
             <span className={navlinkStyle}>SHOP</span>
           </a>
         </nav>
-        <div className="absolute right-8 flex lg:hidden">
+        <div className="absolute right-8 flex md:hidden lg:hidden">
           <div className="space-y-2">
             <span className="block w-8 h-1 bg-gray-900 animate-pulse"></span>
             <span className="block w-8 h-1 bg-gray-900 animate-pulse"></span>
