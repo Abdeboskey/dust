@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 
 import Event from '../Event';
+import Hero from "../Hero";
 
 const Home = () => {
   const [error, setError] = useState(null);
@@ -56,7 +58,7 @@ const Home = () => {
       .then((res) => res.json())
       .then(
         (data) => {
-          setTimeout(setIsLoaded, 800, true);
+          setTimeout(setIsLoaded, 600, true);
           setCalEvents(massageEventData(data));
         },
         (error) => {
@@ -68,33 +70,61 @@ const Home = () => {
 
   if (error) {
     return (
-      <div className="text-center text-4xl font-special font-bold m-8">
-        Something went wrong 😕: {error.message}
+      <div>
+        <Hero />
+        <div className="text-center text-4xl font-special font-bold m-8">
+          Something went wrong 😕: {error.message}
+        </div>
       </div>
     );
   } else if (!isLoaded) {
-    return <div className="text-center text-4xl font-special font-bold m-8">Loading...</div>;
+    return (
+    <div>
+      <Hero />
+      <div className="text-center text-4xl font-special font-bold m-8">Loading...</div>;
+    </div>
+    );
   } else {
     return (
-      <div className="text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium italic m-8 drop-shadow-md">Denver Urban Skate Troop</h1>
-        <p className="-mt-4 mb-6">~ A weekly inline/roller skating community in Denver, Colorado USA~</p>
-        <p className="text-3xl mb-5">Join us for our next meetup:</p>
-        <ul>
-          {calEvents.map((event) => (
-            <Event 
-              key={event.id}
-              weekday={event.start.weekday}
-              month={event.start.month}
-              date={event.start.date}
-              time={event.start.time}
-              title={event.title}
-              color={event.description}
-              location={event.location}
-              htmlLink={event.link}
-            />
-          ))}
-        </ul>
+      <div>
+        <Hero />
+        <div className="text-center">
+          <p className="text-2xl md:text-5xl m-8">Join us for our next meetup:</p>
+          <ul>
+            {calEvents.map((event) => (
+              <Event
+                key={event.id}
+                weekday={event.start.weekday}
+                month={event.start.month}
+                date={event.start.date}
+                time={event.start.time}
+                title={event.title}
+                color={event.description}
+                location={event.location}
+                htmlLink={event.link}
+              />
+            ))}
+          </ul>
+          <p className="text-lg my-8 mx-2 md:mx-auto max-w-prose">
+            Check out our{" "}
+            <Link to="/welcome" className="text-sky-500 underline font-medium">
+              Welcome/FAQ
+            </Link>{" "}
+            and{" "}
+            <Link to="/resources" className="text-sky-500 underline font-medium">
+              Resources
+            </Link>{" "}
+            sections to learn more about DUST, or get some sweet merch from our{" "}
+            <a
+              href="https://denverurbanskatetroop.bigcartel.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sky-500 underline font-medium"
+            >
+              Shop!
+            </a>
+          </p>
+        </div>
       </div>
     );
   }
