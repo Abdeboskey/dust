@@ -13,10 +13,7 @@ function App() {
     <div className="font-main">
       <Header />
       <Routes>
-        <Route
-          exact path="/"
-          element={<Home />}
-        />
+        <Route exact path="/" element={<Home />} />
         <Route path="/welcome" element={<WelcomeFAQ />} />
         <Route
           path="/resources"
