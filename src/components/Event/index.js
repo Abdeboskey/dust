@@ -1,6 +1,5 @@
 const Event = (props) => {
   const {
-    id,
     weekday,
     month,
     date,
@@ -8,11 +7,10 @@ const Event = (props) => {
     title,
     color,
     location,
-    htmlLink,
+    // htmlLink,
   } = props;
 
-  const dateString = `${weekday}, ${month} ${date}`
-  let skateRating; 
+  const dateTimeString = `${weekday}, ${month} ${date} @${time}`
 
   const getLocationURL = (location) => {
     const cleanLocation = location
@@ -22,43 +20,36 @@ const Event = (props) => {
     return `https://www.google.com/maps/search/?api=1&query=${cleanLocation}`;
   };
 
-  switch (color.toUpperCase()) {
-    case 'GREEN':
-      skateRating = '🟩';
-      break
-    case 'BLUE':
-      skateRating = '🟦';
-      break
-    case 'BLACK':
-      skateRating = '⬛'
-      break
-    default:
-      skateRating = 'This route has not been rated'
+  const getSkateRating = (color) => {
+    const rating = color.toUpperCase();
+    if (rating.includes("GREEN")) {
+      return '🟩';
+    } else if (rating.includes("BLUE")) {
+      return '🟦';
+    } else if (rating.includes("BLACK")) {
+      return '⬛';
+    } else {
+      return 'Route rating TBD';
+    }
   }
 
   return (
-    <div
-      className="bg-dusteal rounded-lg shadow-lg text-white w-80 p-4 mx-auto mb-6"
-      // key={id}
-    >
+    <div className="bg-dusteal rounded-lg shadow-lg text-white w-11/12 max-w-[24rem] md:w-96 p-4 mx-auto mb-6">
       <div className="flex items-center">
-        <span className="font-semibold text-3xl mr-4">{skateRating}</span>
-        <p className="mr-1 italic">{dateString}</p>
-        <p className="italic">@{time}</p>
+        <span className="text-3xl mr-4">{getSkateRating(color)}</span>
+        <p className="mr-1 italic">{dateTimeString}</p>
       </div>
-      <p className="text-3xl">• {title} •</p>
-      <p>Meet at</p>
+      <p className="font-semibold text-3xl m-2">• {title} •</p>
+      <p>Meet at:</p>
+      <p>{location}</p>
       <a
         href={getLocationURL(location)}
         target="_blank"
         rel="noreferrer"
         className="underline"
       >
-        <p>{location}</p>
-      </a>
-      <a href={htmlLink} target="_blank" rel="noreferrer">
         <button className="bg-gray-200 rounded-lg shadow-lg text-gray-900 w-60 p-2 mt-4">
-          Open in Google Calendar
+          📍 Open in Google Maps
         </button>
       </a>
     </div>
