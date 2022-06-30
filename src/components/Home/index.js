@@ -73,16 +73,45 @@ const Home = () => {
       <div>
         <Hero />
         <div className="text-center text-4xl font-special font-bold m-8">
-          Something went wrong 😕: {error.message}
+          It is Br0ken 😕: {error.message}
         </div>
       </div>
     );
   } else if (!isLoaded) {
     return (
-    <div>
-      <Hero />
-      <div className="text-center text-4xl font-special font-bold m-8">Loading...</div>;
-    </div>
+      <div>
+        <Hero />
+        <div className="text-center">
+          <p className="text-2xl md:text-5xl m-8">
+            Join us for our next meetup:
+          </p>
+          <div className="text-center text-4xl font-special font-bold m-16">
+            Loading...
+          </div>
+          <p className="text-lg my-8 mx-2 md:mx-auto max-w-prose">
+            Check out our{" "}
+            <Link to="/welcome" className="text-sky-500 underline font-medium">
+              Welcome/FAQ
+            </Link>{" "}
+            and{" "}
+            <Link
+              to="/resources"
+              className="text-sky-500 underline font-medium"
+            >
+              Resources
+            </Link>{" "}
+            sections to learn more about DUST, or get some sweet merch from our{" "}
+            <a
+              href="https://denverurbanskatetroop.bigcartel.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sky-500 underline font-medium"
+            >
+              Shop!
+            </a>
+          </p>
+        </div>
+      </div>
     );
   } else {
     return (
@@ -131,5 +160,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// https://www.google.com/maps/search/?api=1&query=Parfet+Park%2C+Golden%2C+CO+80401%2C+USA
