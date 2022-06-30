@@ -10,14 +10,15 @@ const Event = (props) => {
     // htmlLink,
   } = props;
 
-  const dateTimeString = `${weekday}, ${month} ${date} @${time}`
+  const displayDateTime = `${weekday}, ${month} ${date} @${time}`;
+  const displayLocation = location.replace(/, usa/i, "");
 
   const getLocationURL = (location) => {
-    const cleanLocation = location
+    const formattedLocation = location
       .replaceAll(/\s/gi, "+")
       .replaceAll(/,/gi, "%2C");
 
-    return `https://www.google.com/maps/search/?api=1&query=${cleanLocation}`;
+    return `https://www.google.com/maps/search/?api=1&query=${formattedLocation}`;
   };
 
   const getSkateRating = (color) => {
@@ -31,17 +32,17 @@ const Event = (props) => {
     } else {
       return 'Route rating TBD';
     }
-  }
+  };
 
   return (
     <div className="bg-dusteal rounded-lg shadow-lg text-white w-11/12 max-w-[24rem] md:w-96 p-4 mx-auto mb-6">
       <div className="flex items-center">
         <span className="text-3xl mr-4">{getSkateRating(color)}</span>
-        <p className="mr-1 italic">{dateTimeString}</p>
+        <p className="mr-1 italic">{displayDateTime}</p>
       </div>
       <p className="font-semibold text-3xl m-2">• {title} •</p>
       <p>Meet at:</p>
-      <p>{location}</p>
+      <p>{displayLocation}</p>
       <a
         href={getLocationURL(location)}
         target="_blank"
