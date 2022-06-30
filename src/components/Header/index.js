@@ -5,20 +5,18 @@ const Header = () => {
   const navlinkStyle = "inline-block text-white italic hover:text-gray-900 mr-4";
 
   return (
-    <header className="bg-dusteal border-b-8 border-gray-900 sticky top-0 p-6">
+    <header className="bg-dusteal border-b-8 border-gray-900 sticky top-0 p-6 z-10">
       <div className="flex items-center justify-between flex-wrap">
         <div className="block">
           <Link to="/">
             <img
               src={logo}
-              height="120"
-              width="120"
               alt="Denver Urban Skate Troop Logo"
-              className="absolute top-4"
+              className="absolute h-16 top-2 left-2 md:h-[90px] md:top-4 md:left-4"
             />
           </Link>
         </div>
-        <nav className="block">
+        <nav className="hidden md:block">
           <Link to="/">
             <span className={navlinkStyle}>CALENDAR</span>
           </Link>
@@ -36,7 +34,7 @@ const Header = () => {
             <span className={navlinkStyle}>SHOP</span>
           </a>
         </nav>
-        <div className="absolute right-8 flex lg:hidden">
+        <div className="absolute right-8 flex md:hidden lg:hidden">
           <div className="space-y-2">
             <span className="block w-8 h-1 bg-gray-900 animate-pulse"></span>
             <span className="block w-8 h-1 bg-gray-900 animate-pulse"></span>
