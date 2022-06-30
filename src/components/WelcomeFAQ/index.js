@@ -2,21 +2,21 @@ import SafetyExpectations from "../SafetyExpectations";
 import YouTubeVid from "../YouTubeVid/YouTubeVid";
 
 const WelcomeFAQ = () => {
-  const questionHeadingStyle = "text-2xl m-4";
+  const questionHeadingStyle = "text-2xl font-medium m-4";
   const faqCardStyle = `
     bg-gray-100
     border-dusteal
     border-4
     border-solid
     rounded-xl
-    m-5
+    m-8
     shadow-lg
   `;
   
   return (
     <div className="container mx-auto md:px-10 sm:px-5 max-w-3xl text-center">
-      <YouTubeVid videoURL="https://www.youtube.com/embed/4rArLZlkU8k" />
-      <p className="text-4xl font-bold m-8">Welcome to DUST!</p>
+      <YouTubeVid embedId="4rArLZlkU8k" />
+      <p className="text-4xl md:text-5xl font-bold m-8">Welcome to DUST!</p>
       <p className="mx-5">
         The Denver Urban Skate Troop (DUST) is a weekly rollerblade/quad-skate
         meetup community in Denver, CO. We are a diverse community of skaters
