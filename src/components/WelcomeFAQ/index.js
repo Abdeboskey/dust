@@ -1,6 +1,8 @@
 import SafetyExpectations from "../SafetyExpectations";
 import YouTubeVid from "../YouTubeVid/YouTubeVid";
 
+import bridgeRolls from '../../assets/photos/bridge-rolls.jpg';
+
 const WelcomeFAQ = () => {
   const questionHeadingStyle = "text-2xl font-medium m-4";
   const faqCardStyle = `
@@ -15,6 +17,7 @@ const WelcomeFAQ = () => {
   
   return (
     <div className="container mx-auto md:px-10 sm:px-5 max-w-3xl text-center">
+      <img className="hidden md:block w-screen fixed -top-32 left-0 opacity-20 -z-10"src={bridgeRolls} alt="A group of rollerbladers skating under a bridge" />
       <YouTubeVid embedId="4rArLZlkU8k" />
       <p className="text-4xl md:text-5xl font-bold m-8">Welcome to DUST!</p>
       <p className="mx-5">
@@ -30,7 +33,7 @@ const WelcomeFAQ = () => {
       <div className={faqCardStyle}>
         <p className={questionHeadingStyle}>Q: When does DUST meet?</p>
         <p className="m-5">
-          🛼 DUST meets every <b>Monday & Wednesday night</b>, weather
+          🛼 DUST meets regularly every <b>Monday & Wednesday night</b>, weather
           permitting. There are also spur of the moment get togethers prompted
           by folks within the community. Most often these are shared on our{" "}
           <a
