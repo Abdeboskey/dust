@@ -1,6 +1,6 @@
 const SafetyExpectations = () => {
   return (
-    <div id="safety" className="mt-12">
+    <div id="safety" className="my-12">
       <span className="hidden md:block text-yellow-400 text-[24rem] absolute left-20 -z-10 opacity-70">
         ⚠️
       </span>

@@ -118,7 +118,9 @@ const Home = () => {
       <div>
         <Hero />
         <div className="text-center">
-          <p className="text-2xl md:text-5xl m-8">Join us for our next meetup:</p>
+          <p className="text-2xl md:text-5xl m-8">
+            Join us for our next meetup:
+          </p>
           <ul>
             {calEvents.map((event) => (
               <Event
@@ -134,13 +136,24 @@ const Home = () => {
               />
             ))}
           </ul>
+          <a
+            className="text-sky-500 underline font-medium"
+            href="https://calendar.google.com/calendar/u/5?cid=ZGVudmVydXJiYW5za2F0ZXRyb29wQGdtYWlsLmNvbQ"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Add DUST to your Google Calendar
+          </a>
           <p className="text-lg my-8 mx-2 md:mx-auto max-w-prose">
             Check out our{" "}
             <Link to="/welcome" className="text-sky-500 underline font-medium">
               Welcome/FAQ
             </Link>{" "}
             and{" "}
-            <Link to="/resources" className="text-sky-500 underline font-medium">
+            <Link
+              to="/resources"
+              className="text-sky-500 underline font-medium"
+            >
               Resources
             </Link>{" "}
             sections to learn more about DUST, or get some sweet merch from our{" "}
