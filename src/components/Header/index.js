@@ -1,8 +1,33 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from '../../assets/nu-logo.png';
+import logo from "../../assets/nu-logo.png";
+import DropdownNav from "../DropdownNav";
 
 const Header = () => {
-  const navlinkStyle = "inline-block text-white italic hover:text-gray-900 mr-4";
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const ref = useRef();
+
+  const navlinkStyle =
+    "inline-block text-white italic hover:text-gray-900 mr-4";
+  
+   useEffect(() => {
+     const checkIfClickedOutside = (e) => {
+       // If the menu is open and the clicked target is not within the menu,
+       // then close the menu
+       if (isNavOpen && ref.current && !ref.current.contains(e.target)) {
+         setIsNavOpen(false);
+       }
+     };
+
+     document.addEventListener("mousedown", checkIfClickedOutside);
+
+     return () => {
+       // Cleanup the event listener
+       document.removeEventListener("mousedown", checkIfClickedOutside);
+     };
+   }, [isNavOpen]);
+
 
   return (
     <header className="bg-dusteal border-b-8 border-gray-900 sticky top-0 p-6 z-10">
@@ -18,7 +43,7 @@ const Header = () => {
         </div>
         <nav className="hidden md:block">
           <Link to="/">
-            <span className={navlinkStyle}>CALENDAR</span>
+            <span className={navlinkStyle}>HOME</span>
           </Link>
           <Link to="/welcome">
             <span className={navlinkStyle}>WELCOME/FAQ</span>
@@ -34,13 +59,17 @@ const Header = () => {
             <span className={navlinkStyle}>SHOP</span>
           </a>
         </nav>
-        <div className="absolute right-8 flex md:hidden lg:hidden">
+        <div
+          className="absolute right-8 flex md:hidden cursor-pointer z-30"
+          onClick={() => setIsNavOpen(!isNavOpen)}
+        >
           <div className="space-y-2">
             <span className="block w-8 h-1 bg-gray-900 animate-pulse"></span>
             <span className="block w-8 h-1 bg-gray-900 animate-pulse"></span>
             <span className="block w-8 h-1 bg-gray-900 animate-pulse"></span>
           </div>
         </div>
+        {isNavOpen && <DropdownNav memo={ref} />}
       </div>
     </header>
   );
