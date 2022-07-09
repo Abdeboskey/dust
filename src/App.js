@@ -7,6 +7,7 @@ import {
 import Header from './components/Header';
 import Home from './components/Home';
 import WelcomeFAQ from './components/WelcomeFAQ';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         />
         {/* <ComingSoon /> */}
       </Routes>
+      <Footer />
     </div>
   );
 }
