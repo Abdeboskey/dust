@@ -21,7 +21,7 @@ const WelcomeFAQ = () => {
       <YouTubeVid embedId="4rArLZlkU8k" />
       <p className="text-4xl md:text-5xl font-bold m-8">Welcome to DUST!</p>
       <p className="mx-5">
-        The Denver Urban Skate Troop (DUST) is a weekly rollerblade/quad-skate
+        The Denver Urban Skate Troop (DUST) is a weekly inline/quad skating
         meetup community in Denver, CO. We are a diverse community of skaters
         open to all disciplines, wheel-types, and experience levels. Read on for
         answers to some <b>frequently asked questions</b> and our{" "}
@@ -57,7 +57,7 @@ const WelcomeFAQ = () => {
         </p>
         <p className="m-5">
           🛼 We typically meet <b>30 minutes prior</b> to the posted start time,
-          providing time to get ready, warm up, and socialize.
+          providing time to get ready, warm up, and socialize. For example, if the posted start time is 7:00, we will meet starting at 6:30 and roll out at 7:00.
         </p>
       </div>
       <div className={faqCardStyle}>
