@@ -3,10 +3,10 @@ import {
   Route,
 } from 'react-router-dom';
 
-// import ComingSoon from './components/ComingSoon';
 import Header from './components/Header';
 import Home from './components/Home';
 import WelcomeFAQ from './components/WelcomeFAQ';
+import Resources from './components/Resources';
 import Footer from './components/Footer'
 
 function App() {
@@ -16,13 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/welcome" element={<WelcomeFAQ />} />
-        <Route
-          path="/resources"
-          element={
-            <h1 className="text-4xl text-center font-bold m-8">Resources</h1>
-          }
-        />
-        {/* <ComingSoon /> */}
+        <Route path="/resources" element={<Resources />} />
       </Routes>
       <Footer />
     </div>

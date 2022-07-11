@@ -17,7 +17,11 @@ const WelcomeFAQ = () => {
   
   return (
     <div className="container mx-auto md:px-10 sm:px-5 max-w-3xl text-center">
-      <img className="hidden md:block w-screen fixed -top-32 left-0 opacity-20 -z-10"src={bridgeRolls} alt="A group of rollerbladers skating under a bridge" />
+      <img
+        className="hidden md:block w-screen fixed -top-32 left-0 opacity-20 -z-10"
+        src={bridgeRolls}
+        alt="A group of rollerbladers skating under a bridge"
+      />
       <YouTubeVid embedId="4rArLZlkU8k" />
       <p className="text-4xl md:text-5xl font-bold m-8">Welcome to DUST!</p>
       <p className="mx-5">
@@ -57,7 +61,9 @@ const WelcomeFAQ = () => {
         </p>
         <p className="m-5">
           🛼 We typically meet <b>30 minutes prior</b> to the posted start time,
-          providing time to get ready, warm up, and socialize. For example, if the posted start time is 7:00, we will meet starting at 6:30 and roll out at 7:00.
+          providing time to get ready, warm up, and socialize. For example, if
+          the posted start time is 7:00, we will meet starting at <b>6:30</b>{" "}
+          and roll out at <b>7:00</b>.
         </p>
       </div>
       <div className={faqCardStyle}>
