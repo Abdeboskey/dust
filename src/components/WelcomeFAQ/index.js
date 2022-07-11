@@ -2,6 +2,7 @@ import SafetyExpectations from "../SafetyExpectations";
 import YouTubeVid from "../YouTubeVid/YouTubeVid";
 
 import bridgeRolls from '../../assets/photos/bridge-rolls.jpg';
+import SkateRating from "../SkateRating";
 
 const WelcomeFAQ = () => {
   const questionHeadingStyle = "text-2xl font-medium m-4";
@@ -31,6 +32,10 @@ const WelcomeFAQ = () => {
         answers to some <b>frequently asked questions</b> and our{" "}
         <a href="#safety">
           <b>community safety guidelines</b>
+        </a>
+        {" "}&{" "}
+        <a href="#skate-rating">
+          <b>skate rating system</b>
         </a>
         .
       </p>
@@ -108,6 +113,7 @@ const WelcomeFAQ = () => {
         </p>
       </div>
       <SafetyExpectations />
+      <SkateRating />
     </div>
   );
 };
