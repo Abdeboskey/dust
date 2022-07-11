@@ -3,7 +3,7 @@ import './index.css';
 
 const ComingSoon = () => {
   return (
-    <header className="ComingSoon-header">
+    <header className="ComingSoon-header text-center">
       <img
         src={logo}
         className="ComingSoon-logo m-4"
