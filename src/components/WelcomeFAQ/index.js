@@ -12,7 +12,8 @@ const WelcomeFAQ = () => {
     border-4
     border-solid
     rounded-xl
-    m-8
+    my-8
+    mx-4
     shadow-lg
   `;
   
