@@ -8,9 +8,10 @@ const Home = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [calEvents, setCalEvents] = useState([]);
+  const [seeMultipleEvents, setSeeMultipleEvents] = useState(false);
 
   const getMonth = (month) => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][month];
-  const getDayOfWeek = (weekday) => ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][weekday];
+  const getDayOfWeek = (weekday) => ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'][weekday];
   const isAM = (hour) => hour < 12;
   const getHour = (hour) => (hour <= 12 ? hour : hour - 12);
   const getMinute = (minute) => minute === 0 ? '00' : minute;
@@ -46,9 +47,6 @@ const Home = () => {
         description: event.description,
         location: event.location,
         start: startDate,
-        // end: endDate,
-        // dateRange,
-        link: event.htmlLink,
       }
     });
   },[processDate]);
@@ -119,23 +117,44 @@ const Home = () => {
         <Hero />
         <div className="text-center">
           <p className="text-2xl md:text-5xl m-8">
-            Join us for our next meetup:
+            Join us for our next skate:
           </p>
           <ul>
-            {calEvents.map((event) => (
-              <Event
-                key={event.id}
-                weekday={event.start.weekday}
-                month={event.start.month}
-                date={event.start.date}
-                time={event.start.time}
-                title={event.title}
-                color={event.description}
-                location={event.location}
-                htmlLink={event.link}
-              />
-            ))}
+            {!seeMultipleEvents &&
+              calEvents.map((event) => (
+                <Event
+                  key={event.id}
+                  weekday={event.start.weekday}
+                  month={event.start.month}
+                  date={event.start.date}
+                  time={event.start.time}
+                  title={event.title}
+                  color={event.description}
+                  location={event.location}
+                />
+              ))[0]}
+            {seeMultipleEvents &&
+              calEvents
+                .map((event) => (
+                  <Event
+                    key={event.id}
+                    weekday={event.start.weekday}
+                    month={event.start.month}
+                    date={event.start.date}
+                    time={event.start.time}
+                    title={event.title}
+                    color={event.description}
+                    location={event.location}
+                  />
+                ))
+                .slice(0, 7)}
           </ul>
+          <button
+            className="block mx-auto m-8 bg-gray-200 border-2 border-dusteal rounded-lg shadow-lg text-gray-900 w-52 p-2"
+            onClick={() => setSeeMultipleEvents(!seeMultipleEvents)}
+          >
+            {!seeMultipleEvents ? "See More Skates..." : "See Less Skates"}
+          </button>
           <a
             className="text-sky-500 underline font-medium"
             href="https://calendar.google.com/calendar/u/5?cid=ZGVudmVydXJiYW5za2F0ZXRyb29wQGdtYWlsLmNvbQ"
