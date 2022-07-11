@@ -7,10 +7,9 @@ const Event = (props) => {
     title,
     color,
     location,
-    // htmlLink,
   } = props;
 
-  const displayDateTime = `${weekday}, ${month} ${date} @${time}`;
+  const displayDateTime = `${weekday}, ${month} ${date} - roll out @${time}`;
   const displayLocation = location.replace(/, usa/i, "");
 
   const getLocationURL = (location) => {
