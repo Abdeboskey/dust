@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="text-center lg:text-left bg-gray-200 text-gray-600">
       <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
         <div className="hidden lg:block">
-          <span>Questions, thoughts, or suggestions? Contact us!</span>
+          <span>Questions, thoughts, or suggestions? Contact us! 👉🏼</span>
         </div>
         <div className="flex flex-wrap justify-center">
           <a
@@ -106,7 +106,7 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          <p 
+          <p
             className="flex items-center justify-center w-full sm:w-auto  cursor-pointer"
             onClick={displayCopyMessage}
           >
