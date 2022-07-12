@@ -129,11 +129,11 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="text-center text-gray-900 font-semibold p-6 bg-dusteal border-t-8 border-gray-900">
-        <span>© 2022 Denver Urban Skate Troop</span>
+      <div className="text-center text-gray-900 p-6 bg-dusteal border-t-8 border-gray-900">
+        <p className="font-semibold mb-4">© 2022 Denver Urban Skate Troop</p>
         <p>
-          📸:{" "}
-          <a href="https://www.instagram.com/sweetdangerzack/" target="_blank" rel="noreferrer">
+          📸: all photos by{" "}
+          <a href="https://www.instagram.com/sweetdangerzack/" target="_blank" rel="noreferrer" className="">
             @sweetdangerzack
           </a>
         </p>
