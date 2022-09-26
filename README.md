@@ -18,6 +18,11 @@ This is a website about an inline & quad skating community in Denver, CO. Users 
 ## Contributions
 Contributions to this project are welcomed and encouraged. Please clone this repo, create a new branch (format: `mmddyy-branch-name`), and make a detailed Pull Request outlining the proposed changes.
 
+## Install
+* Clone this repo with `git clone git@github.com:Abdeboskey/dust.git dust`.
+* `cd dust` and run `npm install`.
+* Run `netlify dev` to start the development environment.
+
 ### Happy Skating!
 
 ![Inline skater doing a wall ride at a DUST meetup](/src/assets/photos/TomWallRide.png)
