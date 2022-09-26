@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 
-import Event from '../Event';
+import SkateEvent from '../SkateEvent';
 import Hero from "../Hero";
 
 const Home = () => {
@@ -123,7 +123,7 @@ const Home = () => {
           <ul>
             {!seeMultipleEvents &&
               calEvents.map((event) => (
-                <Event
+                <SkateEvent
                   key={event.id}
                   weekday={event.start.weekday}
                   month={event.start.month}
@@ -137,7 +137,7 @@ const Home = () => {
             {seeMultipleEvents &&
               calEvents
                 .map((event) => (
-                  <Event
+                  <SkateEvent
                     key={event.id}
                     weekday={event.start.weekday}
                     month={event.start.month}
