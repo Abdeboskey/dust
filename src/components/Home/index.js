@@ -37,17 +37,17 @@ const Home = () => {
   
   const massageEventData = useCallback((events) => {
     return events.map((event) => {
-      const startDate = event.start.dateTime
+      const start = event.start.dateTime
         ? processDate(new Date(event.start.dateTime)) 
         : processDate(new Date(`${event.start.date}T00:00:00`));
-      const eventTitle = event.summary.replace(/DUST \/\//, '');
+      const title = event.summary.replace(/DUST \/\//, '');
       
       return {
         id: event.id,
-        title: eventTitle,
+        title,
         description: event.description,
         location: event.location,
-        start: startDate,
+        start,
       }
     });
   },[processDate]);
