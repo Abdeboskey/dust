@@ -21,7 +21,7 @@ Contributions to this project are welcomed and encouraged. Please clone this rep
 ## Install
 * Clone this repo with `git clone git@github.com:Abdeboskey/dust.git dust`.
 * `cd dust` and run `npm install`.
-* Run `netlify dev` to start the development environment.
+* Run `netlify dev` to start the development server.
 
 ### Happy Skating!
 
