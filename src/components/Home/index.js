@@ -40,10 +40,11 @@ const Home = () => {
       const startDate = event.start.dateTime
         ? processDate(new Date(event.start.dateTime)) 
         : processDate(new Date(`${event.start.date}T00:00:00`));
+      const eventTitle = event.summary.replace(/DUST \/\//, '');
       
       return {
         id: event.id,
-        title: event.summary,
+        title: eventTitle,
         description: event.description,
         location: event.location,
         start: startDate,
