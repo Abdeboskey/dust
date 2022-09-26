@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 
-import Event from '../Event';
+import SkateEvent from '../SkateEvent';
 import Hero from "../Hero";
 
 const Home = () => {
@@ -37,16 +37,17 @@ const Home = () => {
   
   const massageEventData = useCallback((events) => {
     return events.map((event) => {
-      const startDate = event.start.dateTime
+      const start = event.start.dateTime
         ? processDate(new Date(event.start.dateTime)) 
         : processDate(new Date(`${event.start.date}T00:00:00`));
+      const title = event.summary.replace(/DUST \/\//, '');
       
       return {
         id: event.id,
-        title: event.summary,
+        title,
         description: event.description,
         location: event.location,
-        start: startDate,
+        start,
       }
     });
   },[processDate]);
@@ -122,7 +123,7 @@ const Home = () => {
           <ul>
             {!seeMultipleEvents &&
               calEvents.map((event) => (
-                <Event
+                <SkateEvent
                   key={event.id}
                   weekday={event.start.weekday}
                   month={event.start.month}
@@ -136,7 +137,7 @@ const Home = () => {
             {seeMultipleEvents &&
               calEvents
                 .map((event) => (
-                  <Event
+                  <SkateEvent
                     key={event.id}
                     weekday={event.start.weekday}
                     month={event.start.month}

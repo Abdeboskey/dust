@@ -2,9 +2,9 @@ import SkateRatingCopy from "./SkateRatingCopy";
 
 const SkateRating = () => {
   return (
-    <div id="skate-rating" className="my-12">
+    <section id="skate-rating" className="my-12">
       <p className="text-4xl font-bold m-8">Skate Rating System</p>
-      <p className="mx-5 text-lg">Each route will have a color associated with it which represents that route's difficulty level. </p>
+      <p className="mx-5 text-lg">Our routes change every week. Each route will have a color representing that route's difficulty level. </p>
       <div className="bg-gray-500 border-dusteal border-8 border-solid rounded-xl m-5 shadow-2xl">
         <SkateRatingCopy
           color="🟩"
@@ -24,7 +24,7 @@ const SkateRating = () => {
           distance."
         />
       </div>
-    </div>
+    </section>
   );
 }
 
