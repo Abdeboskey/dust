@@ -68,7 +68,7 @@ const Home = () => {
       );
   }, [massageEventData]);
 
-  if (error) {
+  if (error || calEvents.length === 0) {
       console.log(error);
     return (
       <div>
