@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
-import { Link } from "react-router-dom";
 
 import SkateEvent from '../SkateEvent';
 import Hero from "../Hero";
+import EmptyCalError from "../EmptyCalError";
+import HomeCopy from "../Copy/Home";
 
 const Home = () => {
   const [error, setError] = useState(null);
@@ -67,13 +68,12 @@ const Home = () => {
       );
   }, [massageEventData]);
 
-  if (error) {
+  if (error || calEvents.length === 0) {
+      console.log(error);
     return (
       <div>
         <Hero />
-        <div className="text-center text-4xl font-special font-bold m-8">
-          It is Br0ken 😕: {error.message}
-        </div>
+        <EmptyCalError />
       </div>
     );
   } else if (!isLoaded) {
@@ -87,28 +87,7 @@ const Home = () => {
           <div className="text-center text-4xl font-special font-bold m-16">
             Loading...
           </div>
-          <p className="text-lg my-8 mx-2 md:mx-auto max-w-prose">
-            Check out our{" "}
-            <Link to="/welcome" className="text-sky-500 underline font-medium">
-              Welcome/FAQ
-            </Link>{" "}
-            and{" "}
-            <Link
-              to="/resources"
-              className="text-sky-500 underline font-medium"
-            >
-              Resources
-            </Link>{" "}
-            sections to learn more about DUST, or get some sweet merch from our{" "}
-            <a
-              href="https://denverurbanskatetroop.bigcartel.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sky-500 underline font-medium"
-            >
-              Shop!
-            </a>
-          </p>
+          <HomeCopy />
         </div>
       </div>
     );
@@ -164,28 +143,7 @@ const Home = () => {
           >
             Add DUST to your Google Calendar
           </a>
-          <p className="text-lg my-8 mx-2 md:mx-auto max-w-prose">
-            Check out our{" "}
-            <Link to="/welcome" className="text-sky-500 underline font-medium">
-              Welcome/FAQ
-            </Link>{" "}
-            and{" "}
-            <Link
-              to="/resources"
-              className="text-sky-500 underline font-medium"
-            >
-              Resources
-            </Link>{" "}
-            sections to learn more about DUST, or get some sweet merch from our{" "}
-            <a
-              href="https://denverurbanskatetroop.bigcartel.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sky-500 underline font-medium"
-            >
-              Shop!
-            </a>
-          </p>
+          <HomeCopy />
         </div>
       </div>
     );
