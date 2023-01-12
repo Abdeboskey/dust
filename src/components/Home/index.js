@@ -69,7 +69,7 @@ const Home = () => {
   }, [massageEventData]);
 
   if (error || calEvents.length === 0) {
-      console.log(error);
+      if (error) console.log(error);
     return (
       <div>
         <Hero />
