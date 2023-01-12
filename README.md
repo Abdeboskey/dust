@@ -2,7 +2,7 @@
 
 # Denver Urban Skate Troop (*DUST*)
 
-This is a website about an inline & quad skating community in Denver, CO. Users can see upcoming events, subscribe to the DUST Google Calendar, learn about our history and community guidelines, access community resources, connect with us through various social media, and access our online merch shop.
+This is a website about an inline & roller skating community in Denver, CO. Users can see upcoming events, subscribe to the DUST Google Calendar, learn about our history and community guidelines, access community resources, connect with us through various social media, and access our online merch shop.
 
 ## Future Features 
 - A `Community Resources` page with links to various subsets of DUST, local skate shops, lists of popular skate spots, tutorials and skill-learning materials, and more. 
@@ -20,6 +20,7 @@ Contributions to this project are welcomed and encouraged. Please clone this rep
 ## Install
 * Clone this repo with `git clone git@github.com:Abdeboskey/dust.git dust`.
 * `cd dust` and run `npm install`.
+* Run `npm install netlify-cli -g` to install the Netlify CLI
 * Run `netlify dev` to start the development server.
 
 ### Happy Skating!
