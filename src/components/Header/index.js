@@ -53,9 +53,6 @@ const Header = () => {
           <NavLink to="/welcome">
             <span className={navlinkStyle}>WELCOME/FAQ</span>
           </NavLink>
-          <NavLink to="/routemaps">
-            <span className={navlinkStyle}>ROUTE MAPS</span>
-          </NavLink>
           <NavLink to="/resources">
             <span className={navlinkStyle}>RESOURCES</span>
           </NavLink>
