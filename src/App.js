@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import WelcomeFAQ from './components/WelcomeFAQ';
 import Resources from './components/Resources';
-import Routemaps from '.components/Routemaps';
+import RouteMaps from './components/RouteMaps';
 import Footer from './components/Footer'
 
 function App() {

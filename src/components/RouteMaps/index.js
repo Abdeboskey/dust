@@ -1,7 +1,7 @@
 import denverdowntown from '../../assets/photos/denverdowntown.jpg';
 import CentralParkMap from '../../assets/routemapimages/regular/CentralPark.png';
 
-const Routes = () => {
+const RouteMaps = () => {
   return (
     <div className="flex">
       <img
@@ -15,7 +15,7 @@ const Routes = () => {
           Curious about where or how far we skate? Here are some of our favorites.
         </p>
         <p className="max-w-md sm:text-xl mx-auto">
-          Our routes are rated from Green to Black in difficulty. Please see <a href="#">this guide</a> to learn more.
+          Our routes are rated from Green to Black in difficulty. Please see <a href="../SkateRating">this guide</a> to learn more.
         </p>
           <img
             src={CentralParkMap}
@@ -26,4 +26,4 @@ const Routes = () => {
   );
 };
 
-export default Routes;
+export default RouteMaps;
