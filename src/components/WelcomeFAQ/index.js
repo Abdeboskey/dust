@@ -114,7 +114,7 @@ const WelcomeFAQ = () => {
         </p>
       </div>
       <SafetyExpectations />
-      <SkateRating />
+      <div id="rating"><SkateRating /></div>
     </div>
   );
 };
