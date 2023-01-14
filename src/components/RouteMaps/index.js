@@ -1,20 +1,7 @@
 import routemapsbanner from '../../assets/photos/routemaps-banner.jpg';
-import ArvadaEasy from '../../assets/routemapimages/ArvadaEasy.png';
-import Belmabrook from '../../assets/routemapimages/Belmabrook.png';
-import Berkley from '../../assets/routemapimages/Berkley.png';
-import Boulder from '../../assets/routemapimages/Boulder.png';
-import Broomfield from '../../assets/routemapimages/Broomfield.png';
-import CentralParkMap from '../../assets/routemapimages/CentralPark.png';
-import CherryCreek from '../../assets/routemapimages/CherryCreek.png';
 import CityPark from '../../assets/routemapimages/CityPark.png';
-import CrownHill from '../../assets/routemapimages/CrownHill.png';
 import DenverDowntown from '../../assets/routemapimages/DenverDowntown.png';
-import Golden from '../../assets/routemapimages/Golden.png';
-import LakewoodGulch from '../../assets/routemapimages/LakewoodGulch.png';
-import RiNo from '../../assets/routemapimages/RiNo.png';
-import Sheridan from '../../assets/routemapimages/Sheridan.png';
 import SloansLake from '../../assets/routemapimages/SloansLake.png';
-import WashPark from '../../assets/routemapimages/WashPark.png';
 
 const RouteMaps = () => {
   return (
