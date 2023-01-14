@@ -1,7 +1,7 @@
 import denverdowntown from '../../assets/photos/denverdowntown.jpg';
-import CentralPark from '../../assets/routes/regular/CentralPark.png';
+import CentralParkMap from '../../assets/routemapimages/regular/CentralPark.png';
 
-const Resources = () => {
+const Routes = () => {
   return (
     <div className="flex">
       <img
@@ -18,7 +18,7 @@ const Resources = () => {
           Our routes are rated from Green to Black in difficulty. Please see <a href="#">this guide</a> to learn more.
         </p>
           <img
-            src={CentralPark}
+            src={CentralParkMap}
             alt="City Park route map"
           />
       </div>
@@ -26,4 +26,4 @@ const Resources = () => {
   );
 };
 
-export default Resources;
+export default Routes;
