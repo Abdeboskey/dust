@@ -25,7 +25,7 @@ const RouteMaps = () => {
             Start at (location)
           </p>
           <img
-            src={CentralParkMap}
+            src={CityPark}
             alt="City Park route map"
             className="w-4/5"
           />
