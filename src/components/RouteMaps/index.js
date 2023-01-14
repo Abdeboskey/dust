@@ -1,4 +1,4 @@
-import routemaps-banner from '../../assets/photos/routemaps-banner.jpg';
+import routemapsbanner from '../../assets/photos/routemaps-banner.jpg';
 import ArvadaEasy from '../../assets/routemapimages/ArvadaEasy.png';
 import Belmabrook from '../../assets/routemapimages/Belmabrook.png';
 import Berkley from '../../assets/routemapimages/Berkley.png';
@@ -20,7 +20,7 @@ const RouteMaps = () => {
   return (
     <div className="flex">
       <img
-        src={routemaps-banner}
+        src={routemapsbanner}
         alt="A stylized banner image for a downtown Denver skate route"
         className="w-full"
       />
