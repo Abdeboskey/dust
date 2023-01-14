@@ -15,7 +15,7 @@ const RouteMaps = () => {
           Curious about where or how far we skate? Here are some of our favorites.
         </p>
         <p className="max-w-md sm:text-xl mx-auto">
-          Our routes are rated from Green to Black in difficulty. Please see <a href="../SkateRating">this guide</a> to learn more.
+          Our routes are rated from Green to Black in difficulty. Please see <a href="../SkateRating" target="_blank">this guide</a> to learn more.
         </p>
           <img
             src={CentralParkMap}
