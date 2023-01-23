@@ -1,15 +1,15 @@
 import routemapsbanner from '../../assets/photos/routemaps-banner.jpg';
-import CityPark from '../../assets/routemapimages/CityPark.png';
-import DenverDowntown from '../../assets/routemapimages/DenverDowntown.png';
-import SloansLake from '../../assets/routemapimages/SloansLake.png';
+import cityPark from '../../assets/routemapimages/CityPark.png';
+import denverDowntown from '../../assets/routemapimages/DenverDowntown.png';
+import sloansLake from '../../assets/routemapimages/SloansLake.png';
 
 const RouteMaps = () => {
   return (
-    <div className="flex">
+    <div className="flex-col">
       <img
         src={routemapsbanner}
         alt="A stylized depiction of a downtown Denver skate route"
-        className="w-full"
+        className="w-full h-1/2"
       />
       <div className="text-center px-4 mx-auto absolute sm:top-44 left-0 right-0 lg:relative lg:top-0 text-white lg:text-gray-900">
         <h1 className="text-5xl font-bold m-8 mt-12">Route Maps</h1>
@@ -25,9 +25,9 @@ const RouteMaps = () => {
             Start at (location)
           </p>
           <img
-            src={CityPark}
+            src={cityPark}
             alt="City Park route map"
-            className="w-4/5"
+            className="w-4/5 mx-auto"
           />
           <h2 className="text-3xl font-bold m-8 mt-12">Denver Downtown</h2>
           <p className="max-w-md sm:text-xl mx-auto">
@@ -35,9 +35,9 @@ const RouteMaps = () => {
             Start at (location)
           </p>
           <img
-            src={DenverDowntown}
+            src={denverDowntown}
             alt="Denver Downtown route map"
-            className="w-4/5"
+            className="w-4/5 mx-auto"
           />
           <h2 className="text-3xl font-bold m-8 mt-12">Sloan's Lake'</h2>
           <p className="max-w-md sm:text-xl mx-auto">
@@ -45,9 +45,9 @@ const RouteMaps = () => {
             Start at (location)
           </p>
           <img
-            src={SloansLake}
+            src={sloansLake}
             alt="Sloan's Lake route map"
-            className="w-4/5"
+            className="w-4/5 mx-auto"
           />
       </div>
     </div>
