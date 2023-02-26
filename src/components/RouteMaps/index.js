@@ -44,7 +44,7 @@ const RouteMaps = () => {
           <h2 className="text-3xl font-bold m-8 mt-12">Sloan&#39;s Lake</h2>
           <p className="max-w-md sm:text-xl mx-auto">
             <strong>Length:</strong> ~ 5 miles (8 km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> 🟩 <a href="../welcome#ratings" target="_blank">Green</a><br />
-            <strong>Average Speed:</strong> ~6 mph (9.6 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Elevation Change: 40 ft (12.2 m) <br />
+            <strong>Average Speed:</strong> ~6 mph (9.6 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Elevation Change:</strong> 40 ft (12.2 m) <br />
             <strong>Start:</strong> <a href="https://goo.gl/maps/DAKHAQpKsjEmvKYq5" target="_blank">Sloan&#39;s Lake Boat House</a>
           </p>
           <a href="https://www.strava.com/activities/7079331780" target="_blank"><img
