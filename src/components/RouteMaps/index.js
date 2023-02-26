@@ -23,9 +23,9 @@ const RouteMaps = () => {
           <p className="max-w-md sm:text-xl mx-auto">
             <strong>Length:</strong> ~ 7 miles (12.9 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> 🟦 <a href="../welcome#ratings" target="_blank">Blue</a><br />
             <strong>Average Speed:</strong> ~8 mph (9.6 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Elevation Change:</strong> 90 ft (27.4 m) <br />
-            <strong>Start:</strong> <a href="https://www.google.com/search?client=firefox-b-1-d&q=39.74684933187119%2C+-104.94319335163887" target="_blank">Denver Museum of Nature and Science</a>
+            <strong>Start:</strong> <a href="https://goo.gl/maps/7kA42CEdjwgqb2718" target="_blank" rel="noopener noreferrer">Denver Museum of Nature and Science</a>
           </p>
-          <a href="https://www.strava.com/activities/7567616273" target="_blank"><img
+          <a href="https://www.strava.com/activities/7567616273" target="_blank" rel="noopener noreferrer"><img
             src={cityPark}
             alt="City Park route map"
             className="w-4/5 mx-auto"
@@ -34,9 +34,9 @@ const RouteMaps = () => {
           <p className="max-w-md sm:text-xl mx-auto">
             <strong>Length:</strong> ~ __ miles ( km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> ⬛ <a href="../welcome#ratings" target="_blank">Black</a><br />
             <strong>Average Speed:</strong> ~10 mph (16 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Elevation Change:</strong> 180 ft (54.8 m) <br />
-            <strong>Start:</strong> <a href="https://goo.gl/maps/Wvd2p7gUUE3dwSyR7" target="_blank">Civic Center Park</a>
+            <strong>Start:</strong> <a href="https://goo.gl/maps/Wvd2p7gUUE3dwSyR7" target="_blank" rel="noopener noreferrer">Civic Center Park</a>
           </p>
-          <a href="https://www.strava.com/activities/7656908869" target="_blank"><img
+          <a href="https://www.strava.com/activities/7656908869" target="_blank" rel="noopener noreferrer"><img
             src={denverDowntown}
             alt="Denver Downtown route map"
             className="w-4/5 mx-auto"
@@ -45,9 +45,9 @@ const RouteMaps = () => {
           <p className="max-w-md sm:text-xl mx-auto">
             <strong>Length:</strong> ~ 5 miles (8 km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> 🟩 <a href="../welcome#ratings" target="_blank">Green</a><br />
             <strong>Average Speed:</strong> ~6 mph (9.6 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Elevation Change:</strong> 40 ft (12.2 m) <br />
-            <strong>Start:</strong> <a href="https://goo.gl/maps/DAKHAQpKsjEmvKYq5" target="_blank">Sloan&#39;s Lake Boat House</a>
+            <strong>Start:</strong> <a href="https://goo.gl/maps/DAKHAQpKsjEmvKYq5" target="_blank" rel="noopener noreferrer">Sloan&#39;s Lake Boat House</a>
           </p>
-          <a href="https://www.strava.com/activities/7079331780" target="_blank"><img
+          <a href="https://www.strava.com/activities/7079331780" target="_blank" rel="noopener noreferrer"><img
             src={sloansLake}
             alt="Sloan's Lake route map"
             className="w-4/5 mx-auto"
