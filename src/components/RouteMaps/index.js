@@ -177,7 +177,7 @@ const RouteMaps = () => {
           <h3 className="text-3xl font-bold m-8 mt-12">Crown Hill</h3>
           <p className="max-w-md sm:text-xl mx-auto">
             <strong>Length:</strong> ~ 1 or 7 miles (1.6 or 11.2 km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> inner loop 🟩 <a href="../welcome#ratings" target="_blank">Green</a> full route 🟦 <a href="../welcome#ratings" target="_blank">Blue</a><br />
-            <strong>Average Speed:</strong> ~6 or ~8 mph (<9.6 or 12.9 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Elevation Change:</strong> 40 or 170 ft (12.2 or 51.8 m) <br />
+            <strong>Average Speed:</strong> ~6 or ~8 mph (9.6 or 12.9 kmh) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Elevation Change:</strong> 40 or 170 ft (12.2 or 51.8 m) <br />
             <strong>Start:</strong> <a href="https://goo.gl/maps/tWRe872AJfeRjqX17" target="_blank" rel="noopener noreferrer">Crown Hill main parking lot</a>
           </p>
           <img
