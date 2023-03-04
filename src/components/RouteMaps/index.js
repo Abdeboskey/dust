@@ -12,6 +12,7 @@ import golden from '../../assets/routemapimages/Golden.png';
 import lakewoodGulch from '../../assets/routemapimages/LakewoodGulch.png';
 import rino from '../../assets/routemapimages/RiNo.png';
 import washPark from '../../assets/routemapimages/WashPark.png';
+import sloansLake from '../../assets/routemapimages/SloansLake.png';
 
 const RouteMaps = () => {
   return (
@@ -170,7 +171,7 @@ const RouteMaps = () => {
             <strong>Start:</strong> <a href="https://goo.gl/maps/eg35HiPMHLCy9E7o9" target="_blank" rel="noopener noreferrer">Valmont Skate Park</a>
           </p>
           <img
-            src={Boulder}
+            src={boulder}
             alt="Boulder route map"
             className="w-4/5 mx-auto"
           />
