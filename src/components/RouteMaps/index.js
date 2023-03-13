@@ -19,36 +19,36 @@ const RouteMaps = () => {
         <p className="max-w-md sm:text-xl mx-auto">
           Our routes are rated from Green to Black in difficulty. Please see <a href="../welcome#ratings" target="_blank">this guide</a> to learn more.
         </p>
-          <h2 className="text-3xl font-bold m-8 mt-12">Central Park</h2>
-          <p className="max-w-md sm:text-xl mx-auto">
-            <strong>Length:</strong> ~ __ miles ( km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> 🟦 <a href="../welcome#ratings" target="_blank">Blue</a><br />
-            Start at (location)
-          </p>
-          <img
-            src={cityPark}
-            alt="City Park route map"
-            className="w-4/5 mx-auto"
-          />
-          <h2 className="text-3xl font-bold m-8 mt-12">Denver Downtown</h2>
-          <p className="max-w-md sm:text-xl mx-auto">
-            <strong>Length:</strong> ~ __ miles ( km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> ⬛ <a href="../welcome#ratings" target="_blank">Black</a><br />
-            Start at (location)
-          </p>
-          <img
-            src={denverDowntown}
-            alt="Denver Downtown route map"
-            className="w-4/5 mx-auto"
-          />
-          <h2 className="text-3xl font-bold m-8 mt-12">Sloan's Lake'</h2>
-          <p className="max-w-md sm:text-xl mx-auto">
-            <strong>Length:</strong> ~ __ miles ( km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> 🟩 <a href="../welcome#ratings" target="_blank">Green</a><br />
-            Start at (location)
-          </p>
-          <img
-            src={sloansLake}
-            alt="Sloan's Lake route map"
-            className="w-4/5 mx-auto"
-          />
+        <h2 className="text-3xl font-bold m-8 mt-12">City Park</h2>
+        <p className="max-w-md sm:text-xl mx-auto">
+          <strong>Length:</strong> ~ __ miles ( km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> 🟦 <a href="../welcome#ratings" target="_blank">Blue</a><br />
+          Start at (location)
+        </p>
+        <img
+          src={cityPark}
+          alt="City Park route map"
+          className="w-4/5 mx-auto"
+        />
+        <h2 className="text-3xl font-bold m-8 mt-12">Denver Downtown</h2>
+        <p className="max-w-md sm:text-xl mx-auto">
+          <strong>Length:</strong> ~ __ miles ( km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> ⬛ <a href="../welcome#ratings" target="_blank">Black</a><br />
+          Start at (location)
+        </p>
+        <img
+          src={denverDowntown}
+          alt="Denver Downtown route map"
+          className="w-4/5 mx-auto"
+        />
+        <h2 className="text-3xl font-bold m-8 mt-12">Sloan's Lake'</h2>
+        <p className="max-w-md sm:text-xl mx-auto">
+          <strong>Length:</strong> ~ __ miles ( km) &nbsp;&nbsp;&nbsp;&nbsp;<strong>Difficulty:</strong> 🟩 <a href="../welcome#ratings" target="_blank">Green</a><br />
+          Start at (location)
+        </p>
+        <img
+          src={sloansLake}
+          alt="Sloan's Lake route map"
+          className="w-4/5 mx-auto"
+        />
       </div>
     </div>
   );
