@@ -17,6 +17,9 @@ const DropdownNav = ({ memo, onClick }) => {
         <NavLink to="/welcome" onClick={onClick}>
           <span className={navlinkStyle}>WELCOME/FAQ</span>
         </NavLink>
+        <NavLink to="/routemaps">
+          <span className={navlinkStyle}>ROUTES</span>
+        </NavLink>
         <NavLink to="/resources" onClick={onClick}>
           <span className={navlinkStyle}>RESOURCES</span>
         </NavLink>
