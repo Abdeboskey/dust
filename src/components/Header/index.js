@@ -59,6 +59,9 @@ const Header = () => {
           <NavLink to="/resources">
             <span className={navlinkStyle}>RESOURCES</span>
           </NavLink>
+          <NavLink to="/conduct">
+            <span className={navlinkStyle}>CODE OF CONDUCT</span>
+          </NavLink>
           <a
             href="https://denverurbanskatetroop.bigcartel.com/"
             target="_blank"
