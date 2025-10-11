@@ -82,7 +82,7 @@ const Home = () => {
         <Hero />
         <div className="text-center">
           <p className="text-2xl md:text-5xl m-8">
-            Join us for our next meetup:
+            Join us for our next skate:
           </p>
           <div className="text-center text-4xl font-special font-bold m-16">
             Loading...
@@ -137,7 +137,7 @@ const Home = () => {
           </button>
           <a
             className="text-sky-500 underline font-medium"
-            href="https://calendar.google.com/calendar/u/5?cid=ZGVudmVydXJiYW5za2F0ZXRyb29wQGdtYWlsLmNvbQ"
+            href="https://calendar.google.com/calendar/u/0?cid=OTkzZGRhYTE5NWFhMTlkZjI4NWIxNGEzZDViNTNhMzUxNjJlMjIyYTFiZGViMjBkODY2Y2UzMTBjOTc3NzBiNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
             target="_blank"
             rel="noreferrer"
           >
