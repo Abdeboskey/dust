@@ -88,7 +88,7 @@ export const skateRoutes = {
       img: cherryCreek,
     },
     {
-      name: "Berkley",
+      name: "Berkley (Tennison)",
       length: 6,
       avgSpeed: 8,
       rating: "Blue",

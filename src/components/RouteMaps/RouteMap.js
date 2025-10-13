@@ -25,7 +25,7 @@ const RouteMap = (props) => {
   }
 
   const feetToMeters = (feet) => {
-    return Math.round(feet * 3.28084);
+    return Math.round(feet / 3.28084);
   }
 
   return (
