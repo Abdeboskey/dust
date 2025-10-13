@@ -47,9 +47,6 @@ const Header = () => {
           </NavLink>
         </div>
         <nav className="hidden md:block">
-          <NavLink to="/">
-            <span className={navlinkStyle}>HOME</span>
-          </NavLink>
           <NavLink to="/welcome">
             <span className={navlinkStyle}>WELCOME/FAQ</span>
           </NavLink>
@@ -58,9 +55,6 @@ const Header = () => {
           </NavLink>
           <NavLink to="/resources">
             <span className={navlinkStyle}>RESOURCES</span>
-          </NavLink>
-          <NavLink to="/conduct">
-            <span className={navlinkStyle}>CODE OF CONDUCT</span>
           </NavLink>
           <a
             href="https://denverurbanskatetroop.bigcartel.com/"
