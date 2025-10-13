@@ -130,7 +130,6 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center text-gray-900 p-6 bg-dusteal border-t-8 border-gray-900">
-        <p className="font-semibold mb-4">© 2023 Denver Urban Skate Troop</p>
         <p>
           📸: all photos by{" "}
           <a href="https://www.instagram.com/sweetdangerzack/" target="_blank" rel="noreferrer" className="">
