@@ -9,7 +9,7 @@ import centralPark from '../../assets/routemapimages/CentralPark.png';
 import cherryCreek from '../../assets/routemapimages/CherryCreek.png';
 import golden from '../../assets/routemapimages/Golden.png';
 import lakewoodGulch from '../../assets/routemapimages/LakewoodGulch.png';
-import rino from '../../assets/routemapimages/RiNo.png';
+import rino from '../../assets/routemapimages/Rino.png';
 import washPark from '../../assets/routemapimages/WashPark.png';
 import sloansLake from '../../assets/routemapimages/SloansLake.png';
 import lowry from '../../assets/routemapimages/Lowry.png';

@@ -6,7 +6,7 @@ const SafetyExpectations = () => {
         <img
           className=""
           src={conduct}
-          alt="The Denver Urban Skate Code of Conduct depicted as a stylized image"
+          alt="The Denver Urban Skate Code of Conduct"
         />
     </div>
   );
