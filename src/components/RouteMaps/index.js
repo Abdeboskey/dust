@@ -44,9 +44,7 @@ const RouteMaps = () => {
           <a href="../welcome#ratings" target="_blank"> this guide </a>
           to learn more.
         </p>
-        <h2 className="text-4xl m-8 mt-12">Popular Regular</h2>
         {createRoutes(skateRoutes.regular)}
-        <h2 className="text-4xl m-8 mt-12">New or Experimental</h2>
         {createRoutes(skateRoutes.experimental)}
       </div>
     </div>
