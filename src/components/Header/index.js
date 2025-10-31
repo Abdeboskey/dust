@@ -47,9 +47,6 @@ const Header = () => {
           </NavLink>
         </div>
         <nav className="hidden md:block">
-          <NavLink to="/">
-            <span className={navlinkStyle}>HOME</span>
-          </NavLink>
           <NavLink to="/welcome">
             <span className={navlinkStyle}>WELCOME/FAQ</span>
           </NavLink>

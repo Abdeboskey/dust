@@ -4,14 +4,16 @@ import arvadaEasy from '../../assets/routemapimages/ArvadaEasy.png';
 import belmabrook from '../../assets/routemapimages/Belmabrook.png';
 import crownHill from '../../assets/routemapimages/CrownHill.png';
 import berkley from '../../assets/routemapimages/Berkley.png';
-import boulder from '../../assets/routemapimages/Boulder.png';
+import boulder from '../../assets/routemapimages/Boulder-new.png';
 import centralPark from '../../assets/routemapimages/CentralPark.png';
 import cherryCreek from '../../assets/routemapimages/CherryCreek.png';
 import golden from '../../assets/routemapimages/Golden.png';
 import lakewoodGulch from '../../assets/routemapimages/LakewoodGulch.png';
-import rino from '../../assets/routemapimages/RiNo.png';
+import rino from '../../assets/routemapimages/Rino-old.png';
 import washPark from '../../assets/routemapimages/WashPark.png';
 import sloansLake from '../../assets/routemapimages/SloansLake.png';
+import lowry from '../../assets/routemapimages/Lowry.png';
+import highPlains from '../../assets/routemapimages/HighPlains.png';
 
 export const skateRoutes = {
   regular: [
@@ -86,7 +88,7 @@ export const skateRoutes = {
       img: cherryCreek,
     },
     {
-      name: "Berkley",
+      name: "Berkley (Tennison)",
       length: 6,
       avgSpeed: 8,
       rating: "Blue",
@@ -118,7 +120,7 @@ export const skateRoutes = {
   ],
   experimental: [
     {
-      name: "Arvada Easy Mode",
+      name: "Arvada",
       length: 7,
       avgSpeed: 8,
       rating: "Blue",
@@ -141,10 +143,10 @@ export const skateRoutes = {
       name: "Boulder",
       length: 9,
       avgSpeed: 8,
-      rating: "Blue",
+      rating: "Black",
       elevation: 163,
-      startName: "Valmont Skate Park",
-      startUrl: "https://goo.gl/maps/eg35HiPMHLCy9E7o9",
+      startName: "Scott Carpenter Park",
+      startUrl: "https://maps.app.goo.gl/vHuNWC4DRATkkhex9",
       img: boulder,
     },
     {
@@ -156,6 +158,26 @@ export const skateRoutes = {
       startName: "Crown Hill main parking lot",
       startUrl: "https://goo.gl/maps/tWRe872AJfeRjqX17",
       img: crownHill,
+    },
+    {
+      name: "Lowry",
+      length: 8,
+      avgSpeed: 8,
+      rating: "Blue",
+      elevation: 85,
+      startName: "Wings over the Rockies Air Museum",
+      startUrl: "https://maps.app.goo.gl/Zkwmt3C7yWZ7aAnw7",
+      img: lowry,
+    },
+    {
+      name: "High Plains",
+      length: 8,
+      avgSpeed: 8,
+      rating: "Blue",
+      elevation: 135,
+      startName: "High Plains Park Pump Track",
+      startUrl: "https://maps.app.goo.gl/iuRVRyzRMV8Q4Mnb9",
+      img: highPlains,
     },
   ],
 };

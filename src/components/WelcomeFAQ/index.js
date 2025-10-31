@@ -1,4 +1,4 @@
-import SafetyExpectations from "../SafetyExpectations";
+import Conduct from "../Conduct";
 import YouTubeVid from "../YouTubeVid/YouTubeVid";
 
 import bridgeRolls from '../../assets/photos/bridge-rolls.jpg';
@@ -113,7 +113,7 @@ const WelcomeFAQ = () => {
           distance, with plenty of stops and socialization.
         </p>
       </div>
-      <SafetyExpectations />
+      <Conduct />
       <div id="rating"><SkateRating /></div>
     </div>
   );
