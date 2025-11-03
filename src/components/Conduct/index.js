@@ -1,4 +1,4 @@
-import conduct from '../../assets/DUST-code-Nov25.jpeg';
+import conduct from '../../assets/code-of-conduct-nov25.jpeg';
 
 const SafetyExpectations = () => {
   const longDesc = `
