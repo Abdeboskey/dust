@@ -11,7 +11,7 @@ const SafetyExpectations = () => {
         />
     </div>
     <div id="conductdescription" hidden>
-      A poster titled “DUST Code of Conduct” from the Denver Urban Skate Troop (DUST), featuring seven sections on community expectations:
+      A poster titled &quot;DUST Code of Conduct&quot; from the Denver Urban Skate Troop (DUST), featuring seven sections on community expectations:
 
       Keep It Positive, Respect Everyone – Emphasizes openness, kindness, and mutual support in a diverse community.
       Zero Tolerance for Hate & Violence – States that discrimination, harassment, or bullying have no place at DUST events or online.
@@ -21,7 +21,7 @@ const SafetyExpectations = () => {
       Inclusivity Is Key – Encourages participation for skaters of all levels, backgrounds, and identities.
       Have Fun & Be You – Invites self-expression and enjoyment while skating.
 
-      The poster concludes with a note that it was created “with inspiration from Skate Hunnies LA.”
+      The poster concludes with a note that it was created &quot;with inspiration from Skate Hunnies LA.&quot;
     </div>
   );
 };
