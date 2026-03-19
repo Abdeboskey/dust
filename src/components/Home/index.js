@@ -54,22 +54,29 @@ const Home = () => {
   },[processDate]);
 
   useEffect(() => {
-    fetch("./.netlify/functions/calFetch")
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          setTimeout(setIsLoaded, 600, true);
-          setCalEvents(massageEventData(data));
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
+    fetch("/.netlify/functions/calFetch") // Removed the dot
+      .then((res) => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then((data) => {
+        // Ensure data is actually an array before processing
+        const eventArray = Array.isArray(data) ? data : data.items || [];
+        setCalEvents(massageEventData(eventArray));
+        setIsLoaded(true);
+      })
+      .catch((error) => {
+        console.error("Fetch error:", error);
+        setError(error);
+        setIsLoaded(true);
+      });
   }, [massageEventData]);
 
+  if (!isLoaded) {
+    return <LoadingComponent />;
+  }
+
   if (error || calEvents.length === 0) {
-      if (error) console.log(error);
     return (
       <div>
         <Hero />
