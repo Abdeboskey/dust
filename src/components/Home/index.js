@@ -54,36 +54,30 @@ const Home = () => {
   },[processDate]);
 
   useEffect(() => {
-    fetch("/.netlify/functions/calFetch") // Removed the dot
-      .then((res) => {
-        if (!res.ok) throw new Error('Network response was not ok');
-        return res.json();
-      })
-      .then((data) => {
-        // Ensure data is actually an array before processing
-        const eventArray = Array.isArray(data) ? data : data.items || [];
-        setCalEvents(massageEventData(eventArray));
-        setIsLoaded(true);
-      })
-      .catch((error) => {
-        console.error("Fetch error:", error);
-        setError(error);
-        setIsLoaded(true);
-      });
-  }, [massageEventData]);
+      fetch("/.netlify/functions/calFetch")
+        .then((res) => {
+          // If the server returns a 404 or 500, throw an error
+          if (!res.ok) throw new Error(`Server error: ${res.status}`);
+          return res.text(); // Get response as text first to check if it's empty
+        })
+        .then((text) => {
+          if (!text) {
+            throw new Error("The server returned an empty response.");
+          }
+          const data = JSON.parse(text);
+          const eventArray = Array.isArray(data) ? data : data.items || [];
+          setCalEvents(massageEventData(eventArray));
+          setIsLoaded(true);
+        })
+        .catch((error) => {
+          console.error("Calendar Fetch Error:", error);
+          setError(error);
+          setIsLoaded(true);
+        });
+    }, [massageEventData]);
 
+  // 1. Handle Loading State
   if (!isLoaded) {
-    return <LoadingComponent />;
-  }
-
-  if (error || calEvents.length === 0) {
-    return (
-      <div>
-        <Hero />
-        <EmptyCalError />
-      </div>
-    );
-  } else if (!isLoaded) {
     return (
       <div>
         <Hero />
@@ -98,17 +92,43 @@ const Home = () => {
         </div>
       </div>
     );
-  } else {
+  }
+
+  // 2. Handle Error or Empty Calendar
+  if (error || calEvents.length === 0) {
     return (
       <div>
         <Hero />
-        <div className="text-center">
-          <p className="text-2xl md:text-5xl m-8">
-            Join us for our next skate:
-          </p>
-          <ul>
-            {!seeMultipleEvents &&
-              calEvents.map((event) => (
+        <EmptyCalError />
+      </div>
+    );
+  }
+
+  // 3. Handle Successful Render
+  return (
+    <div>
+      <Hero />
+      <div className="text-center">
+        <p className="text-2xl md:text-5xl m-8">
+          Join us for our next skate:
+        </p>
+        <ul>
+          {!seeMultipleEvents &&
+            calEvents.map((event) => (
+              <SkateEvent
+                key={event.id}
+                weekday={event.start.weekday}
+                month={event.start.month}
+                date={event.start.date}
+                time={event.start.time}
+                title={event.title}
+                color={event.description}
+                location={event.location}
+              />
+            ))[0]}
+          {seeMultipleEvents &&
+            calEvents
+              .map((event) => (
                 <SkateEvent
                   key={event.id}
                   weekday={event.start.weekday}
@@ -119,42 +139,27 @@ const Home = () => {
                   color={event.description}
                   location={event.location}
                 />
-              ))[0]}
-            {seeMultipleEvents &&
-              calEvents
-                .map((event) => (
-                  <SkateEvent
-                    key={event.id}
-                    weekday={event.start.weekday}
-                    month={event.start.month}
-                    date={event.start.date}
-                    time={event.start.time}
-                    title={event.title}
-                    color={event.description}
-                    location={event.location}
-                  />
-                ))
-                .slice(0, 7)}
-          </ul>
-          <button
-            className="block mx-auto m-8 bg-gray-200 border-2 border-dusteal rounded-lg shadow-lg text-gray-900 w-52 p-2"
-            onClick={() => setSeeMultipleEvents(!seeMultipleEvents)}
-          >
-            {!seeMultipleEvents ? "See More Skates..." : "See Less Skates"}
-          </button>
-          <a
-            className="text-sky-500 underline font-medium"
-            href="https://calendar.google.com/calendar/u/5?cid=ZGVudmVydXJiYW5za2F0ZXRyb29wQGdtYWlsLmNvbQ"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Add DUST to your Google Calendar
-          </a>
-          <HomeCopy />
-        </div>
+              ))
+              .slice(0, 7)}
+        </ul>
+        <button
+          className="block mx-auto m-8 bg-gray-200 border-2 border-dusteal rounded-lg shadow-lg text-gray-900 w-52 p-2"
+          onClick={() => setSeeMultipleEvents(!seeMultipleEvents)}
+        >
+          {!seeMultipleEvents ? "See More Skates..." : "See Less Skates"}
+        </button>
+        <a
+          className="text-sky-500 underline font-medium"
+          href="https://calendar.google.com/calendar/u/5?cid=ZGVudmVydXJiYW5za2F0ZXRyb29wQGdtYWlsLmNvbQ"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Add DUST to your Google Calendar
+        </a>
+        <HomeCopy />
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 export default Home;
