@@ -14,6 +14,7 @@ import washPark from '../../assets/routemapimages/WashPark.png';
 import sloansLake from '../../assets/routemapimages/SloansLake.png';
 import lowry from '../../assets/routemapimages/Lowry.png';
 import highPlains from '../../assets/routemapimages/HighPlains.png';
+import beehive from '../../assets/routemapimages/Beehive.png';
 
 export const skateRoutes = {
   regular: [
@@ -120,7 +121,7 @@ export const skateRoutes = {
   ],
   experimental: [
     {
-      name: "Arvada",
+      name: "Arvada Easy",
       length: 7,
       avgSpeed: 8,
       rating: "Blue",
@@ -178,6 +179,16 @@ export const skateRoutes = {
       startName: "High Plains Park Pump Track",
       startUrl: "https://maps.app.goo.gl/iuRVRyzRMV8Q4Mnb9",
       img: highPlains,
+    },
+    {
+      name: "Beehive",
+      length: 13,
+      avgSpeed: 10,
+      rating: "Black",
+      elevation: 310,
+      startName: "Beehive Skate Shop",
+      startUrl: "https://maps.app.goo.gl/ZQg1DYwY7b1gRJ6v6",
+      img: beehive,
     },
   ],
 };
