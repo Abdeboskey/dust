@@ -10,11 +10,8 @@ const Resources = () => {
       />
       <div className="text-center px-4 mx-auto absolute sm:top-44 left-0 right-0 lg:relative lg:top-0 text-white lg:text-gray-900">
         <h1 className="text-5xl font-bold m-8 mt-12">Community Resources</h1>
-        <span className="hidden lg:block lg:text-[18rem]">⏳</span>
         <p className="max-w-md sm:text-xl mx-auto">
-          Coming soon! Please check back for a list of community resources,
-          including friends of DUST, local skate spots, links to tutorials and
-          skill-building materials, and more!
+          The best way to learn about skate-related resources is to join us for an event and ask one of the regulars. Alternatively, the folks at <strong><a href="https://beehiveskatedenver.com/" rel="noreferrer" target="_blank">Beehive Skate Shop</a></strong> would be happy to help you out.
         </p>
         <div className="hidden lg:flex lg:text-8xl mt-16 mb-8">
           <span className="motion-safe:animate-spin ml-auto">🔘</span>

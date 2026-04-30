@@ -14,6 +14,8 @@ import washPark from '../../assets/routemapimages/WashPark.png';
 import sloansLake from '../../assets/routemapimages/SloansLake.png';
 import lowry from '../../assets/routemapimages/Lowry.png';
 import highPlains from '../../assets/routemapimages/HighPlains.png';
+import beehive from '../../assets/routemapimages/Beehive.png';
+import capHill from '../../assets/routemapimages/CapHill.png';
 
 export const skateRoutes = {
   regular: [
@@ -80,7 +82,7 @@ export const skateRoutes = {
     {
       name: "Cherry Creek",
       length: 9,
-      avgSpeed: 10,
+      avgSpeed: 9,
       rating: "Black",
       elevation: 193,
       startName: "Pavilion at Cheesman Park",
@@ -88,7 +90,7 @@ export const skateRoutes = {
       img: cherryCreek,
     },
     {
-      name: "Berkley (Tennison)",
+      name: "Berkley (Tennyson)",
       length: 6,
       avgSpeed: 8,
       rating: "Blue",
@@ -100,7 +102,7 @@ export const skateRoutes = {
     {
       name: "Golden",
       length: 8,
-      avgSpeed: 8,
+      avgSpeed: 9,
       rating: "Blue",
       elevation: 194,
       startName: "Parfet Park",
@@ -120,9 +122,9 @@ export const skateRoutes = {
   ],
   experimental: [
     {
-      name: "Arvada",
+      name: "Arvada Easy",
       length: 7,
-      avgSpeed: 8,
+      avgSpeed: 7,
       rating: "Blue",
       elevation: 111,
       startName: "Arvada Memorial Skate Park",
@@ -132,7 +134,7 @@ export const skateRoutes = {
     {
       name: "Belmabrook",
       length: 5,
-      avgSpeed: 8,
+      avgSpeed: 7,
       rating: "Blue",
       elevation: 153,
       startName: "Heritage Lakewood Building",
@@ -142,7 +144,7 @@ export const skateRoutes = {
     {
       name: "Boulder",
       length: 9,
-      avgSpeed: 8,
+      avgSpeed: 9,
       rating: "Black",
       elevation: 163,
       startName: "Scott Carpenter Park",
@@ -152,7 +154,7 @@ export const skateRoutes = {
     {
       name: "Crown Hill",
       length: 7,
-      avgSpeed: 8,
+      avgSpeed: 6,
       rating: "Blue",
       elevation: 170,
       startName: "Crown Hill main parking lot",
@@ -178,6 +180,26 @@ export const skateRoutes = {
       startName: "High Plains Park Pump Track",
       startUrl: "https://maps.app.goo.gl/iuRVRyzRMV8Q4Mnb9",
       img: highPlains,
+    },
+    {
+      name: "Beehive",
+      length: 13,
+      avgSpeed: 10,
+      rating: "Black",
+      elevation: 310,
+      startName: "Beehive Skate Shop",
+      startUrl: "https://maps.app.goo.gl/ZQg1DYwY7b1gRJ6v6",
+      img: beehive,
+    },
+    {
+      name: "CapHill",
+      length: 9,
+      avgSpeed: 9,
+      rating: "Black",
+      elevation: 245,
+      startName: "Bar Nun Denver",
+      startUrl: "https://maps.app.goo.gl/kmz49QnNnzAVFAQg8",
+      img: capHill,
     },
   ],
 };

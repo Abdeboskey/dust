@@ -54,29 +54,28 @@ const Home = () => {
   },[processDate]);
 
   useEffect(() => {
-    fetch("./.netlify/functions/calFetch")
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          setTimeout(setIsLoaded, 600, true);
-          setCalEvents(massageEventData(data));
-        },
-        (error) => {
+      fetch("/.netlify/functions/calFetch")
+        .then((res) => {
+          if (!res.ok) throw new Error(`Server error: ${res.status}`);
+          return res.text();
+        })
+        .then((text) => {
+          if (!text) {
+            throw new Error("The server returned an empty response.");
+          }
+          const data = JSON.parse(text);
+          const eventArray = Array.isArray(data) ? data : data.items || [];
+          setCalEvents(massageEventData(eventArray));
           setIsLoaded(true);
+        })
+        .catch((error) => {
+          console.error("Calendar Fetch Error:", error);
           setError(error);
-        }
-      );
-  }, [massageEventData]);
+          setIsLoaded(true);
+        });
+    }, [massageEventData]);
 
-  if (error || calEvents.length === 0) {
-      if (error) console.log(error);
-    return (
-      <div>
-        <Hero />
-        <EmptyCalError />
-      </div>
-    );
-  } else if (!isLoaded) {
+  if (!isLoaded) {
     return (
       <div>
         <Hero />
@@ -91,17 +90,41 @@ const Home = () => {
         </div>
       </div>
     );
-  } else {
+  }
+
+  if (error || calEvents.length === 0) {
     return (
       <div>
         <Hero />
-        <div className="text-center">
-          <p className="text-2xl md:text-5xl m-8">
-            Join us for our next skate:
-          </p>
-          <ul>
-            {!seeMultipleEvents &&
-              calEvents.map((event) => (
+        <EmptyCalError />
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <Hero />
+      <div className="text-center">
+        <p className="text-2xl md:text-5xl m-8">
+          Join us for our next skate:
+        </p>
+        <ul>
+          {!seeMultipleEvents &&
+            calEvents.map((event) => (
+              <SkateEvent
+                key={event.id}
+                weekday={event.start.weekday}
+                month={event.start.month}
+                date={event.start.date}
+                time={event.start.time}
+                title={event.title}
+                color={event.description}
+                location={event.location}
+              />
+            ))[0]}
+          {seeMultipleEvents &&
+            calEvents
+              .map((event) => (
                 <SkateEvent
                   key={event.id}
                   weekday={event.start.weekday}
@@ -112,42 +135,27 @@ const Home = () => {
                   color={event.description}
                   location={event.location}
                 />
-              ))[0]}
-            {seeMultipleEvents &&
-              calEvents
-                .map((event) => (
-                  <SkateEvent
-                    key={event.id}
-                    weekday={event.start.weekday}
-                    month={event.start.month}
-                    date={event.start.date}
-                    time={event.start.time}
-                    title={event.title}
-                    color={event.description}
-                    location={event.location}
-                  />
-                ))
-                .slice(0, 7)}
-          </ul>
-          <button
-            className="block mx-auto m-8 bg-gray-200 border-2 border-dusteal rounded-lg shadow-lg text-gray-900 w-52 p-2"
-            onClick={() => setSeeMultipleEvents(!seeMultipleEvents)}
-          >
-            {!seeMultipleEvents ? "See More Skates..." : "See Less Skates"}
-          </button>
-          <a
-            className="text-sky-500 underline font-medium"
-            href="https://calendar.google.com/calendar/u/0?cid=OTkzZGRhYTE5NWFhMTlkZjI4NWIxNGEzZDViNTNhMzUxNjJlMjIyYTFiZGViMjBkODY2Y2UzMTBjOTc3NzBiNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Add DUST to your Google Calendar
-          </a>
-          <HomeCopy />
-        </div>
+              ))
+              .slice(0, 7)}
+        </ul>
+        <button
+          className="block mx-auto m-8 bg-gray-200 border-2 border-dusteal rounded-lg shadow-lg text-gray-900 w-52 p-2"
+          onClick={() => setSeeMultipleEvents(!seeMultipleEvents)}
+        >
+          {!seeMultipleEvents ? "See More Skates..." : "See Less Skates"}
+        </button>
+        <a
+          className="text-sky-500 underline font-medium"
+          href="https://calendar.google.com/calendar/u/0?cid=OTkzZGRhYTE5NWFhMTlkZjI4NWIxNGEzZDViNTNhMzUxNjJlMjIyYTFiZGViMjBkODY2Y2UzMTBjOTc3NzBiNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Add DUST to your Google Calendar
+        </a>
+        <HomeCopy />
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 export default Home;
