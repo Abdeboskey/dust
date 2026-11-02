@@ -5,6 +5,8 @@ const Resources = () => {
     <div className="flex">
       <img
         src={rachelAndEd}
+        width="1200"
+        height="1798"
         alt="One skater sitting in a trash can, and one standing next to the trash can"
         className="lg:w-1/2"
       />

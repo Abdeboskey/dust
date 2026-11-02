@@ -1,34 +1,49 @@
-import fetch from 'node-fetch';
-
 const { CAL_API, CAL_ID } = process.env;
-const BASEPARAMS = `orderBy=startTime&singleEvents=true&timeMin=${new Date().toISOString()}`;
-const BASEURL = `https://www.googleapis.com/calendar/v3/calendars/${CAL_ID}/events?${BASEPARAMS}`;
 
 const HEADERS = {
   "Content-Type": "application/json",
   "Access-Control-Allow-Methods": "GET",
+  "Cache-Control": "public, max-age=0, must-revalidate",
+  "Netlify-CDN-Cache-Control": "public, durable, s-maxage=900, stale-while-revalidate=3600",
 };
 
-exports.handler = async function (event, context) {
-  const finalURL = `${BASEURL}&key=${CAL_API}`;
+const buildCalendarURL = () => {
+  const params = new URLSearchParams({
+    orderBy: "startTime",
+    singleEvents: "true",
+    maxResults: "10",
+    timeMin: new Date().toISOString(),
+    key: CAL_API,
+  });
+  return `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CAL_ID)}/events?${params}`;
+};
+
+export const handler = async (event) => {
+  if (event.httpMethod !== "GET") {
+    return { statusCode: 405, headers: { Allow: "GET" } };
+  }
+
+  if (!CAL_API || !CAL_ID) {
+    console.error("calFetch: CAL_API and/or CAL_ID environment variables are not set");
+    return { statusCode: 500, body: JSON.stringify({ error: "Calendar is not configured" }) };
+  }
+
   try {
-    if (event.httpMethod === "GET") {
-      return fetch(finalURL)
-        .then((response) => response.json())
-        .then((data) => ({
-          statusCode: 200,
-          body: JSON.stringify(data.items, null, 2),
-          HEADERS,
-        }));
+    const response = await fetch(buildCalendarURL());
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error(`calFetch: Google Calendar API returned ${response.status}`, data?.error?.message);
+      return { statusCode: 502, body: JSON.stringify({ error: "Calendar service error" }) };
     }
+
     return {
-      statusCode: 401,
+      statusCode: 200,
+      headers: HEADERS,
+      body: JSON.stringify(data.items ?? []),
     };
   } catch (e) {
-    console.error(e);
-    return {
-      statusCode: 500,
-      body: e.toString(),
-    };
-  };
+    console.error("calFetch:", e);
+    return { statusCode: 500, body: JSON.stringify({ error: "Failed to fetch calendar" }) };
+  }
 };

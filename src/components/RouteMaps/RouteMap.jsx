@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const RouteMap = (props) => {
   const {
     name,
@@ -33,12 +35,14 @@ const RouteMap = (props) => {
       <h3 className="text-3xl font-bold m-8">{name}</h3>
       <img
         src={img}
-        alt={name + "route map"}
+        alt={`${name} route map`}
+        loading="lazy"
+        decoding="async"
         className="w-4/5 md:w-1/3 my-6 mx-auto"
       />
       <p className="max-w-md sm:text-xl md:text-left mx-auto">
         <strong>Length:</strong> ~{length} miles ({milesToKm(length)} km) <br />
-        <strong>Difficulty:</strong><a href="../welcome#ratings" target="_blank"> {getRatingEmoji(rating)} {rating}</a><br />
+        <strong>Difficulty:</strong> <Link to="/welcome#skate-rating">{getRatingEmoji(rating)} {rating}</Link><br />
         <strong>Average Speed:</strong> ~{avgSpeed} mph ({milesToKm(avgSpeed)} kmh) <br />
         <strong>Elevation Change:</strong> {elevation} ft ({feetToMeters(elevation)} m) <br />
         <strong>Start:</strong><a href={startUrl} target="_blank" rel="noopener noreferrer"> {startName}</a>

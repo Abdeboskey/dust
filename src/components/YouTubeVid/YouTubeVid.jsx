@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const YouTubeVid = (props) => {
   const { embedId } = props;
 
@@ -16,10 +14,5 @@ const YouTubeVid = (props) => {
     </div>
   );
 };
-
-YouTubeVid.propTypes = {
-  embedId: PropTypes.string.isRequired,
-};
-
 
 export default YouTubeVid;
