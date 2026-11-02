@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import RouteMap from './RouteMap';
 import { skateRoutes } from './routeData.js';
 import routemapsbanner from '../../assets/photos/routemaps-banner.jpg';
@@ -26,6 +27,8 @@ const RouteMaps = () => {
     <div className="flex-col">
       <img
         src={routemapsbanner}
+        width="2000"
+        height="227"
         alt="A stylized depiction of a downtown Denver skate route"
         className="w-full h-1/2"
       />
@@ -41,7 +44,7 @@ const RouteMaps = () => {
             or
           <span className="font-bold"> Black </span>
           in difficulty. Please see
-          <a href="../welcome#ratings" target="_blank"> this guide </a>
+          {" "}<Link to="/welcome#skate-rating" className="underline">this guide</Link>{" "}
           to learn more.
         </p>
         {createRoutes(skateRoutes.regular)}

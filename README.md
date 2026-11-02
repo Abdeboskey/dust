@@ -12,16 +12,20 @@ This is a website about an inline & roller skating community in Denver, CO. User
 - React JS
 - React Router
 - Tailwind CSS
+- Vite
 - Netlify
 
 ## Contributions
 Contributions to this project are welcomed and encouraged. Please clone this repo, create a new branch (format: `mmddyy-branch-name`), and make a detailed Pull Request outlining the proposed changes.
 
 ## Install
+* Requires Node 22 (or 20.19+).
 * Clone this repo with `git clone git@github.com:Abdeboskey/dust.git dust`.
 * `cd dust` and run `npm install`.
 * Run `npm install netlify-cli -g` to install the Netlify CLI
-* Run `netlify dev` to start the development server.
+* Run `netlify dev` to start the development server. The calendar function needs the `CAL_API` and `CAL_ID` environment variables from Netlify.
+* `npm run dev` starts just the site (no calendar), `npm test` runs the tests, and `npm run build` creates a production build in `build/`.
+* Keep images small: resize photos and route maps to at most ~2000px wide (route maps ~1200px) before adding them to `src/assets`.
 
 ### Happy Skating!
 

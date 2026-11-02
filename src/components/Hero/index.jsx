@@ -6,6 +6,8 @@ const Hero = () => {
       <img
         className="w-screen"
         src={bridgeRoll}
+        width="2000"
+        height="1335"
         alt="Skating on a slope under a bridge"
       />
       <div className="text-center md:text-left m-4 md:absolute md:top-[12%] lg:top-[14%] md:left-12 lg:left-16 text-white">

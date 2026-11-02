@@ -17,9 +17,11 @@ The poster concludes with a note that it was created "with inspiration from Skat
 
   return (
     <>
-      <figure id="safety" className="my-12">
+      <figure id="safety" className="my-12 scroll-mt-32">
         <img
           src={conduct}
+          width="900"
+          height="1600"
           alt="DUST Code of Conduct poster"
           aria-describedby="conductdescription"
         />
